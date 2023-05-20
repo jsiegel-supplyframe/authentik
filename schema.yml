@@ -4610,6 +4610,25 @@ paths:
         schema:
           type: string
       - in: query
+        name: type
+        schema:
+          type: string
+          enum:
+          - default
+          - external
+          - internal_service_account
+          - service_account
+        description: |-
+          * `default` - Default
+          * `external` - External
+          * `service_account` - Service Account
+          * `internal_service_account` - Internal Service Account
+
+          * `default` - Default
+          * `external` - External
+          * `service_account` - Service Account
+          * `internal_service_account` - Internal Service Account
+      - in: query
         name: username
         schema:
           type: string
@@ -38388,6 +38407,8 @@ components:
         path:
           type: string
           minLength: 1
+        type:
+          $ref: '#/components/schemas/UserTypeEnum'
     PatchedUserSAMLSourceConnectionRequest:
       type: object
       description: SAML Source Serializer
@@ -41792,6 +41813,8 @@ components:
           readOnly: true
         path:
           type: string
+        type:
+          $ref: '#/components/schemas/UserTypeEnum'
       required:
       - avatar
       - groups_obj
@@ -42250,6 +42273,8 @@ components:
         path:
           type: string
           minLength: 1
+        type:
+          $ref: '#/components/schemas/UserTypeEnum'
       required:
       - name
       - username
@@ -42333,6 +42358,8 @@ components:
           additionalProperties: {}
           description: Get user settings with tenant and group settings applied
           readOnly: true
+        type:
+          $ref: '#/components/schemas/UserTypeEnum'
       required:
       - avatar
       - groups
@@ -42433,6 +42460,18 @@ components:
       - pk
       - source
       - user
+    UserTypeEnum:
+      enum:
+      - default
+      - external
+      - service_account
+      - internal_service_account
+      type: string
+      description: |-
+        * `default` - Default
+        * `external` - External
+        * `service_account` - Service Account
+        * `internal_service_account` - Internal Service Account
     UserVerificationEnum:
       enum:
       - required
