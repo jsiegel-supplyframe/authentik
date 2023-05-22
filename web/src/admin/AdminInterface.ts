@@ -30,7 +30,7 @@ import PFDrawer from "@patternfly/patternfly/components/Drawer/drawer.css";
 import PFPage from "@patternfly/patternfly/components/Page/page.css";
 import PFBase from "@patternfly/patternfly/patternfly-base.css";
 
-import { AdminApi, SessionUser, UiThemeEnum, Version } from "@goauthentik/api";
+import { AdminApi, CapabilitiesEnum, SessionUser, Version } from "@goauthentik/api";
 
 autoDetectLanguage();
 
@@ -307,6 +307,16 @@ export class AdminInterface extends Interface {
                     <span slot="label">${msg("Outpost Integrations")}</span>
                 </ak-sidebar-item>
             </ak-sidebar-item>
+            ${this.config?.capabilities.includes(CapabilitiesEnum.IsEnterprise)
+                ? html`
+                      <ak-sidebar-item>
+                          <span slot="label">${msg(`Enterprise`)}</span>
+                          <ak-sidebar-item path="/enterprise/licenses">
+                              <span slot="label">${msg(`Licenses`)}</span>
+                          </ak-sidebar-item>
+                      </ak-sidebar-item>
+                  `
+                : html``}
         `;
     }
 }
