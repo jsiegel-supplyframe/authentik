@@ -31658,8 +31658,12 @@ components:
         users:
           type: integer
           readOnly: true
+        external_users:
+          type: integer
+          readOnly: true
       required:
       - expiry
+      - external_users
       - key
       - license_uuid
       - name
