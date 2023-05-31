@@ -3962,6 +3962,16 @@
                             "type": "string",
                             "minLength": 1,
                             "title": "Path"
+                        },
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "default",
+                                "external",
+                                "service_account",
+                                "internal_service_account"
+                            ],
+                            "title": "Type"
                         }
                     },
                     "required": [
@@ -4153,6 +4163,16 @@
                             "type": "string",
                             "minLength": 1,
                             "title": "Path"
+                        },
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "default",
+                                "external",
+                                "service_account",
+                                "internal_service_account"
+                            ],
+                            "title": "Type"
                         }
                     },
                     "required": [
@@ -4348,6 +4368,16 @@
                             "type": "string",
                             "minLength": 1,
                             "title": "Path"
+                        },
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "default",
+                                "external",
+                                "service_account",
+                                "internal_service_account"
+                            ],
+                            "title": "Type"
                         }
                     },
                     "required": [
@@ -6504,6 +6534,16 @@
                             "type": "string",
                             "minLength": 1,
                             "title": "Path"
+                        },
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "default",
+                                "external",
+                                "service_account",
+                                "internal_service_account"
+                            ],
+                            "title": "Type"
                         }
                     },
                     "required": [
@@ -7239,6 +7279,16 @@
                             "type": "string",
                             "minLength": 1,
                             "title": "Path"
+                        },
+                        "type": {
+                            "type": "string",
+                            "enum": [
+                                "default",
+                                "external",
+                                "service_account",
+                                "internal_service_account"
+                            ],
+                            "title": "Type"
                         }
                     },
                     "required": [
@@ -8315,6 +8365,16 @@
                     "type": "string",
                     "minLength": 1,
                     "title": "Path"
+                },
+                "type": {
+                    "type": "string",
+                    "enum": [
+                        "default",
+                        "external",
+                        "service_account",
+                        "internal_service_account"
+                    ],
+                    "title": "Type"
                 },
                 "password": {
                     "type": "string",

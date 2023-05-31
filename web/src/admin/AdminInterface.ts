@@ -310,9 +310,9 @@ export class AdminInterface extends Interface {
             ${this.config?.capabilities.includes(CapabilitiesEnum.IsEnterprise)
                 ? html`
                       <ak-sidebar-item>
-                          <span slot="label">${msg(`Enterprise`)}</span>
+                          <span slot="label">${msg("Enterprise")}</span>
                           <ak-sidebar-item path="/enterprise/licenses">
-                              <span slot="label">${msg(`Licenses`)}</span>
+                              <span slot="label">${msg("Licenses")}</span>
                           </ak-sidebar-item>
                       </ak-sidebar-item>
                   `

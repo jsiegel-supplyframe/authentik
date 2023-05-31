@@ -3,8 +3,7 @@ import "@goauthentik/elements/CodeMirror";
 import "@goauthentik/elements/forms/HorizontalFormElement";
 import { ModelForm } from "@goauthentik/elements/forms/ModelForm";
 
-import { t } from "@lingui/macro";
-
+import { msg } from "@lit/localize";
 import { TemplateResult, html } from "lit";
 import { customElement } from "lit/decorators.js";
 
@@ -20,9 +19,9 @@ export class EnterpriseLicenseForm extends ModelForm<License, string> {
 
     getSuccessMessage(): string {
         if (this.instance) {
-            return t`Successfully updated license.`;
+            return msg("Successfully updated license.");
         } else {
-            return t`Successfully created license.`;
+            return msg("Successfully created license.");
         }
     }
 
@@ -44,7 +43,7 @@ export class EnterpriseLicenseForm extends ModelForm<License, string> {
             <ak-form-element-horizontal
                 name="key"
                 ?writeOnly=${this.instance !== undefined}
-                label=${t`License key`}
+                label=${msg("License key")}
             >
                 <textarea class="pf-c-form-control"></textarea>
             </ak-form-element-horizontal>
