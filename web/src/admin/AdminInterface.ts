@@ -30,7 +30,7 @@ import PFDrawer from "@patternfly/patternfly/components/Drawer/drawer.css";
 import PFPage from "@patternfly/patternfly/components/Page/page.css";
 import PFBase from "@patternfly/patternfly/patternfly-base.css";
 
-import { AdminApi, CapabilitiesEnum, SessionUser, Version } from "@goauthentik/api";
+import { AdminApi, CapabilitiesEnum, SessionUser, UiThemeEnum, Version } from "@goauthentik/api";
 
 autoDetectLanguage();
 
